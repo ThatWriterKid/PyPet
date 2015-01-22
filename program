@@ -1,0 +1,127 @@
+
+##Using the tutorial at http://www.thinkful.com/learn/python-programming-fundamentals/#If-Statements ##
+##PETS!##
+Fish = {
+	'name': 'Mr. Fish',
+	'age': 1,
+	'weight': .02,
+	'hungry': True,
+	'photo': '<><',
+}
+Mouse = {
+	'name': 'Mr. Cheese',
+	'age': 1,
+	'weight': .5,
+	'hungry': True,
+	'photo': '<>~',
+}
+Cat = {
+	'name': 'Mr. Whiskers',
+	'age': 1,
+	'weight': 6.5,
+	'hungry': True,
+	'photo': '(>0.0^<)~',
+}
+Dog = {
+	'name': 'Mr. Woof',
+	'age': 4,
+	'weight': 6.5,
+	'hungry': True,
+	'photo': '(0.0U)~',
+}
+Dragon = {
+	'name': 'Mr. Decapitation',
+	'age': 1000000,
+	'weight': 30000,
+	'hungry': True,
+	'photo': '*>^~~~',
+}
+
+
+animals = [Fish, Mouse, Cat, Dog, Dragon]
+pets = []
+
+##FUNCTIONS!##
+def feed(pet):
+	if pet['hungry'] == True:
+		pet['hungry'] = False		
+		pet['weight'] = pet['weight'] + .01
+		print pet['name'] + ' is now full!'
+	else:
+		print pet['name'] + ' is gonna get fat...'
+		pet['weight'] = pet['weight'] + .01
+
+def feedall(pet):
+	for pet in pets:
+		feed(pet)
+
+##ACTUAL PROGRAM##
+print 'Welcome to Pypet!'
+print 'What kind of pet do you want to adopt?'
+print 'You can adopt a fish, a cat, a mouse, a dragon, or a dog.'
+
+knowmore = raw_input('Which one do you want to know more about?  ')
+if knowmore == 'dog':
+	print 'This is a dog! His name is ' + Dog['name'] + '.'
+	print Dog['photo']
+	print 'He is this many years old:'
+	print Dog['age']
+	print 'He weighs this many pounds:'
+	print Dog['weight']
+elif knowmore == 'cat':
+	print 'This is a cat! His name is ' + Cat['name'] + '.'
+	print Cat['photo']
+	print 'He is this many years old:'
+	print Cat['age']
+	print 'He weighs this many pounds:'
+	print Cat['weight']
+elif knowmore == 'mouse':
+	print 'This is an adorable mouse! His name is ' + Mouse['name'] + '.'
+	print Mouse['photo']
+	print 'He is this many years old:'
+	print Mouse['age']
+	print 'He weighs this many pounds:'
+	print Mouse['weight']
+elif knowmore == 'fish':
+	print 'This is a simple fish! His name is ' + Fish['name'] + '.'
+	print Fish['photo']
+	print 'He is this many years old:'
+	print Fish['age']
+	print 'He weighs this many pounds:'
+	print Fish['weight']
+elif knowmore == 'dragon':
+	print 'This is an ancient dragon! His name is ' + Dragon['name'] + '.'
+	print Dragon['photo']
+	print 'He is this many years old:'
+	print Dragon['age']
+	print 'He weighs this many pounds:'
+	print Dragon['weight']
+else:
+	print 'Whoops, I did not get that. Restart me please.'
+
+adopt = raw_input('So who do you want to adopt? Please say "dog", "mouse", etc.  ')
+if adopt == 'dog':
+	pets.append(Dog)
+	print 'Congratulations! ' + Dog['name'] + ' is now yours!'
+elif adopt == 'cat':
+	pets.append(Cat)
+	print 'Congratulations! ' + Cat['name'] + ' is now yours!'
+elif adopt ==  'mouse':
+	pets.append(Mouse)
+	print 'Congratulations! ' + Mouse['name'] + ' is now yours!'
+elif adopt == 'fish':
+	pets.append(Fish)
+	print 'Congratulations! ' + Fish['name'] + ' is now yours!'
+elif adopt == 'dragon':
+	pets.append(Dragon)
+	print 'Congratulations! ' + Dragon['name'] + ' is now yours!'
+else:
+	print 'Whoops, I did not get that. Restart me please.'
+
+
+
+
+
+##SCRAPS##
+
+
